@@ -14,6 +14,20 @@ var app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
+//import basex
+var basex = require('basex');
+
+//create baseX server thing
+var client = new basex.Session("localhost", 1984, "admin", "admin");
+
+//connect to baseX database
+client.execute("OPEN ColensoDB");
+
+//check what files are in the database for testing purposes
+client.execute("LIST YOLO", function(err,res) {
+  if(!err) console.log(res.result)
+});
+
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
