@@ -7,16 +7,7 @@ client.execute("OPEN ColensoDB");
 
 /* GET home page. */
 router.get("/",function(req,res,next){
-  client.execute("XQUERY declare namespace tei ='http://www.tei-c.org/ns/1.0';" +
-      "(//name[@type='place'])[1]",
-      function (error, result) {
-        if(error){ console.error(error);}
-        else {
-          //console.log("PRINTING STUFF: " + result.result);
-          res.render('index', { title: 'ECS Video Rental', place: result.result });
-        }
-      }
-  );
+          res.render('index');
 });
 
 module.exports = router;

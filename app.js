@@ -6,7 +6,8 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
 var routes = require('./routes/index');
-var users = require('./routes/users');
+var stringSearch = require('./routes/stringSearch');
+var xQuerySearch = require('./routes/xQuerySearch');
 
 var app = express();
 //test comment
@@ -28,10 +29,10 @@ client.execute("OPEN ColensoDB");
   if(!err) console.log(res.result)
 });*/
 
-client.execute("XQUERY declare namespace tei='http://www.tei-c.org/ns/1.0'; " +
+/*client.execute("XQUERY declare namespace tei='http://www.tei-c.org/ns/1.0'; " +
     "for $n in (collection('C/Hooker/')//tei:p[position() = 1])\n" +
     "return db:path($n)",
-    function(err,res) { if(!err) console.log(res.result)} );
+    function(err,res) { if(!err) console.log(res.result)} );*/
 
 
 // uncomment after placing your favicon in /public
@@ -43,7 +44,8 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
-app.use('/users', users);
+app.use('/stringSearch', stringSearch);
+app.use('/xQuerySearch', xQuerySearch);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
