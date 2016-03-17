@@ -7,16 +7,22 @@ client.execute("OPEN ColensoDB");
 
 /* GET home page. */
 router.get("/",function(req,res,next){
-    client.execute("XQUERY db:list('ColensoDB')", function(error,result){
-       if(error){console.error(error)}
-        else {
-           var list = result.result;
-           var listArray =  list.split("\r\n");
-           res.render('index', { pathArray: listArray});
-       }
-    });
-   // console.log("TEST");
-  //  res.render('index', {test: result.result});
+
+
+        client.execute("XQUERY db:list('ColensoDB')", function (error, result) {
+            if (error) {
+
+                console.error(error)
+            }
+            else {
+                var list = result.result;
+                var listArray = list.split("\r\n");
+
+                res.render('index', {pathArray: listArray});
+            }
+        });
+
+
 });
 
 
