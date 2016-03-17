@@ -9,21 +9,25 @@ client.execute("OPEN ColensoDB");
 //req.body.variable
 
 router.get('/', function(req, res, next) {//request, response
-  //I want an xquery to find all the xml documents that are based on a string
     var xQuery = "XQUERY declare namespace tei ='http://www.tei-c.org/ns/1.0';" +
+            /*For every file in the collection*/
         "for $file in collection('ColensoDB')" +
+            /*select the file if it contains the text ("req...)*/
         "where $file//text() contains text {'" + req.query.searchInput + "'}" +
-        "return $file//text()";
+            //Return the text of the file
+        "return $file";
 
   client.execute(xQuery,function (error, result) {
         if(error){ console.error(error);}
         else {
-          console.log("Search queried for: " + req.query.searchInput);
+
           res.render('stringSearch', { queryResult:  result.result});
         }
       }
   );
 });
+
+
 
 
 module.exports = router;
