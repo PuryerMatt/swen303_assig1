@@ -15,12 +15,14 @@ router.get('/', function(req, res, next) {//request, response
             /*select the file if it contains the text ("req...)*/
         "where $file//text() contains text {'" + req.query.searchInput + "'}" +
             //Return the text of the file
-        "return $file//text()";
+        "return db:path($file)";
 
   client.execute(xQuery,function (error, result) {
         if(error){ console.error(error);}
         else {
-          res.render('stringSearch', { queryResult:  result.result});
+            var list = result.result;
+            var listArray = list.split("\r\n");
+          res.render('stringSearch', { queryResult:  listArray});
         }
       }
   );
