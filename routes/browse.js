@@ -1,5 +1,6 @@
 var express = require('express');
 var pretty = require('vkbeautify');
+//var jQuery = require('jquery');
 var Handlebars = require('handlebars');
 var router = express.Router();
 
@@ -16,8 +17,14 @@ router.get("/",function(req,res,next){
         "doc('ColensoDB/"+ path +"')", function(error,result){
         if(error){console.error(error)}
         else {
+            if(typeof result.result === 'string'){
+                console.log("IS A STRING");
+            }
+
+           // var xmlFile = jQuery.parseXML(result.result);
             var xmlDoc = pretty.xml(result.result,4);
             xmlDoc = new Handlebars.SafeString(xmlDoc);
+
             res.render('browse',{xmlDoc: xmlDoc});
 
         }
