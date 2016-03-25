@@ -11,9 +11,18 @@
 
     <div class="well well-lg">
         <ul id="paths">
-        {{#each pathArray}}
-            <ul><a href="browse/?pathResult={{{this}}}">{{{this}}}</a></ul>
-        {{/each}}
+
+            {{#if direct}}
+                {{#each pathArray}}
+                <ul><a href="browse/?pathResult={{{this}}}">{{{this}}}</a></ul>
+                {{/each}}
+            {{else}}
+                {{#each pathArray}}
+                <ul><a href="/?pathResult={{{this}}}">{{{this}}}</a></ul>
+                {{/each}}
+            {{/if}}
+            <!--<ul><a href="browse/?pathResult=this">this</a></ul>-->
+
         </ul>
     </div>
 
