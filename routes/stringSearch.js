@@ -19,7 +19,7 @@ router.get('/', function(req, res, next) {//request, response
         else {
             var list = result.result;
             var listArray = list.split("\r\n");
-            console.log("LISTARRAY: " + listArray);
+            //console.log("LISTARRAY: " + listArray);
           res.render('stringSearch', { queryResult:  listArray});
         }
       }

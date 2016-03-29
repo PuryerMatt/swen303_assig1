@@ -10,6 +10,7 @@ var routes = require('./routes/index');
 var stringSearch = require('./routes/stringSearch');
 var xQuerySearch = require('./routes/xQuerySearch');
 var browse = require('./routes/browse');
+var addXML = require('./routes/addXML');
 var app = express();
 
 // view engine setup
@@ -49,6 +50,7 @@ app.use('/', routes);
 app.use('/stringSearch', stringSearch);
 app.use('/xQuerySearch', xQuerySearch);
 app.use('/browse', browse);
+app.use('/addXML', addXML);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
