@@ -1,0 +1,36 @@
+# General Options
+DEBUG = false
+DBPATH = C:\UNI 2016/SWEN 303/SWEN303_Assig1/BaseX/data
+REPOPATH = C:\UNI 2016/SWEN 303/SWEN303_Assig1/BaseX/repo
+LANG = English
+LANGKEYS = false
+GLOBALLOCK = false
+
+# Client/Server Architecture
+HOST = localhost
+PORT = 1984
+SERVERPORT = 1984
+USER = 
+PASSWORD = 
+SERVERHOST = 
+PROXYHOST = 
+PROXYPORT = 0
+NONPROXYHOSTS = 
+IGNORECERT = false
+TIMEOUT = 30
+KEEPALIVE = 600
+PARALLEL = 8
+LOG = true
+LOGMSGMAXLEN = 1000
+ASYNCTIMEOUT = 3600
+
+# HTTP Services
+WEBPATH = C:/Program Files (x86)/BaseX/webapp
+RESTPATH = 
+RESTXQPATH = 
+CACHERESTXQ = false
+HTTPLOCAL = false
+STOPPORT = 8985
+AUTHMETHOD = Basic
+
+# Local Options

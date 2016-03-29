@@ -1,21 +1,49 @@
 
+<script>
+    var format = true;
+    function formattingClick(){
+        format = !format;
+        if(!format) {
+            $('#tagged').show();
+            $('#text').hide();
+        } else {
+            $('#tagged').hide();
+            $('#text').show();
+        }
+    }
+
+    function test(tem) {
+        return $.parseXML(tem);
+    }
+</script>
+
+
 <div class = container>
-    <div id="xmlWell" class="well well-lg" >
-        <h1>TEXT VIEW</h1>
-            <b><p>{{{xmlDoc}}}</p></b>
+    <div id="format-button" class="row" align="left">
+        <button class="btn btn-info" style="margin-left: 15px" onclick="formattingClick()">Toggle formatting</button>
+    </div>
+    <div class="row" align="right">
+        <form class="navbar-form navbar-left" action="/browse/download/{{path}}" method ="get">
+            <button class="btn btn-info" type="submit">Download</button>
+        </form>
     </div>
 
 </div>
-
-<div class = container>
-    <div id="xmlWell" class="well well-lg">
-        <h2>XML View</h2>
-        <xmp>
-        <b><p>{{{xmlDoc}}}</p></b>
-        </xmp>
-
+<div class=container>
+    <div id="'xmlwell" class="well well-lg">
+        <div class="row" id="text">
+            <h1>TEXT VIEW</h1>
+            <p>{{{prettyDoc}}}</p>
+        </div>
+        <div class="row" id="tagged" hidden>
+            <h2>XML View</h2>
+            <xmp>
+                {{{xmlDoc}}}
+            </xmp>
+        </div>
     </div>
-
 </div>
+
+
 
 

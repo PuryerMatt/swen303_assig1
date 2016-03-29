@@ -11,4 +11,19 @@ a {
   word-wrap: break-word;
   max-height: 600px;
   overflow-y:scroll;
+
+}
+#format-button{
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
+#index-button {
+  text-align: left;
+  min-width: 100%;
+  font-weight: bold;
+
+}
+#search-bar {
+  min-width: 100%;
 }

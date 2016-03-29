@@ -1,0 +1,123 @@
+# Paths
+INPUTPATH = C:/Users/MattP/Downloads/Colenso_TEIs (1).zip
+DATAPATH = C:/Program Files (x86)/BaseX/
+WORKPATH = C:/Program Files (x86)/BaseX/webapp/dba/
+PROJECTPATH = 
+EDITOR = 0
+INPUTS = 2
+INPUTS1 = C:/Users/MattP/Downloads/Colenso_TEIs (1).zip
+INPUTS2 = C:/Users/MattP/Downloads/XML Stuff/Colenso_TEIs.zip
+OPEN = 0
+
+# Layout
+FONT = SansSerif
+MONOFONT = Consolas
+FONTTYPE = 0
+FONTSIZE = 13
+ONLYMONO = false
+COLORRED = 15
+COLORGREEN = 11
+COLORBLUE = 6
+
+# Windows
+UPDATEVERSION = 8.4.1
+VIEWS = V map editor H folder plot - H text info table tree explore - - 
+GUISIZE0 = 1004
+GUISIZE1 = 748
+GUILOC0 = 10
+GUILOC1 = 10
+MAXSTATE = true
+SHOWBUTTONS = true
+SHOWINPUT = true
+SHOWSTATUS = true
+SHOWINFO = true
+SHOWMAP = true
+SHOWTABLE = false
+SHOWTEXT = true
+SHOWFOLDER = false
+SHOWEXPLORE = false
+SHOWPLOT = false
+SHOWEDITOR = true
+SHOWTREE = false
+SHOWPROJECT = true
+PREFTAB = 0
+LOOKANDFEEL = 
+SCALE = true
+SHOWNAME = true
+MOUSEFOCUS = false
+SIMPLEFD = false
+ASCSORT = true
+CASESORT = true
+MERGEDUPL = false
+COLUMN = 1
+UNICODE = true
+SHOWMARGIN = true
+MARGIN = 80
+TABSPACES = true
+INDENT = 2
+SHOWINVISIBLE = true
+SHOWNL = false
+SHOWLINES = true
+MARKLINE = true
+SAVERUN = false
+PARSEPROJ = true
+AUTO = true
+FILES = *.xml, *.xq*
+HIDDENFILES = true
+SEARCHMODE = 1
+FILTERRT = false
+EXECRT = false
+DBNAME = ColensoDB
+LASTINSERT = 1
+
+# Visualizations
+MAPATTS = false
+MAPOFFSETS = 3
+MAPALGO = 0
+MAPWEIGHT = 0
+TREESLIM = true
+TREEATTS = false
+PLOTDOTS = 0
+PLOTXLOG = false
+PLOTYLOG = false
+MAXTEXT = 2097152
+MAXHITS = 250000
+
+# Search
+SR_SEARCH = letter
+SR_REPLACE = 
+SR_REGEX = false
+SR_CASE = false
+SR_WORD = false
+SR_MULTI = false
+SEARCHED = 2
+SEARCHED1 = aed
+SEARCHED2 = 
+REPLACED = 0
+
+# History
+COMMANDS = 1
+COMMANDS1 = 
+SEARCH = 12
+SEARCH1 = /title
+SEARCH2 = 
+SEARCH3 = pear
+SEARCH4 = string
+SEARCH5 = *
+SEARCH6 = matt
+SEARCH7 = carl
+SEARCH8 = scott
+SEARCH9 = cullum
+SEARCH10 = porn
+SEARCH11 = are
+SEARCH12 = is
+XQUERY = 7
+XQUERY1 = doc('Colenso/diary/diary.xml')
+XQUERY2 = teiHeader/fileDesc/titleStmt/title
+XQUERY3 = title
+XQUERY4 = /title
+XQUERY5 = *
+XQUERY6 = doc("diary.xml")
+XQUERY7 = city
+
+# Local Options

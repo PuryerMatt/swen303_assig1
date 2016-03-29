@@ -1,18 +1,18 @@
 
-<div class = container>
-    <h1>Add xml</h1>
-    <form class="navbar-form navbar-left" action="/addXML/add" method ="post">
-        <div class="form-group">
-            <div class = container>
-            <input name="docName" type="text" class="form-control" placeholder="Doc name">
-            </div>
-        </div>
-        <div class = container>
-        <textarea class="form-control" rows="12" name="addedXML" placeholder="XML formatted text goes here"></textarea>
-        </div>
-        <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
-    </form>
 
-</div>
+<form class="navbar-form navbar-left" action="/addXML/add" method ="post">
+    <div class="form-group">
+         <div class = "container">
+             <h1>Add XML Document</h1>
+             <div class="well well-lg" class="form-control"  name="addedXML" placeholder="XML formatted text goes (drag bot right to increase text area size)">
+                 <input name="docName" type="text" class="form-control" placeholder="Doc name">
+                 <textarea class="form-control" style="min-width: 100%" name="addedXML" placeholder="{{success}}"></textarea>
+             </div>
+        </div>
+    </div>
+    <div class = container>
+        <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-plus"></span></button>
+    </div>
+</form>
 
 

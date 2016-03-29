@@ -13,19 +13,27 @@ client.execute("OPEN ColensoDB");
 
 /* GET home page. */
 router.get("/", function(req,res,next) {
-   res.render('addXML');
+   res.render('addXML', {success: "XML formatted text goes here"});
 });
 router.post("/add",function(req,res,next){
     var addedXML = req.body.addedXML;
+
     var name = req.body.docName;
-    console.log("NAME: " +name);
-    console.log("ADDED XML"+ addedXML);
+    addedXML = "<TEI xmlns='http://www.tei-c.org/ns/1.0' xml:id='"+name+"'>" + addedXML + "</TEI>";
+    //console.log("NAME: " +name);
+    //console.log("ADDED XML"+ addedXML);
+    if(name.length === 0){
+        res.render('addXML', {success: "Please define a document name"});
+    } else if(addedXML. length === 0){
+        res.render('addXML', {success: "You need to write XML to add XML"});
+    }
     client.execute("XQUERY db:add('ColensoDB',"+ addedXML +",'UserAdded/" + name + ".xml')", function(error,result){
-        if(error){console.error(error)}
+        if(error){
+            console.error(error);
+            res.render('addXML', {success: "Error: " + error});
+        }
         else {
-
-
-            res.render('addXML');
+            res.render('addXML', {success: "Success!"});
 
         }
     });
