@@ -22,9 +22,9 @@ COLORBLUE = 6
 UPDATEVERSION = 8.4.1
 VIEWS = V H editor folder map plot - H text info table tree explore - - 
 GUISIZE0 = 1004
-GUISIZE1 = 748
-GUILOC0 = 10
-GUILOC1 = 10
+GUISIZE1 = 735
+GUILOC0 = 121
+GUILOC1 = 149
 MAXSTATE = false
 SHOWBUTTONS = true
 SHOWINPUT = true
@@ -94,7 +94,14 @@ REPLACED = 0
 
 # History
 COMMANDS = 0
-SEARCH = 0
-XQUERY = 0
+SEARCH = 4
+SEARCH1 = name[@type='place']
+SEARCH2 = //name[@type='place']
+SEARCH3 = //name[@type='person']
+SEARCH4 =  name[@type='place']
+XQUERY = 3
+XQUERY1 = //name[@type='place']
+XQUERY2 = //name[@type='person']
+XQUERY3 =  name[@type='place']
 
 # Local Options
