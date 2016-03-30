@@ -16,14 +16,23 @@ a {
 #format-button{
   padding-top: 3px;
   padding-bottom: 3px;
+
 }
 
 #index-button {
-  text-align: left;
-  min-width: 100%;
-  font-weight: bold;
+   text-align: left;
+   min-width: 100%;
+   font-weight: bold;
+   /*  background: #404040;
+
+     color: #ffffff;*/
+
+ }
+
+
+#search {
+    padding-top: 10px;
+    padding-bottom: 10px;
 
 }
-#search-bar {
-  min-width: 100%;
-}
+

@@ -26,18 +26,7 @@ var client = new basex.Session("localhost", 1984, "admin", "admin");
 //connect to baseX database
 client.execute("OPEN ColensoDB");
 
-//check what files are in the database for testing purposes
-/*client.execute("LIST YOLO", function(err,res) {
-  if(!err) console.log(res.result)
-});*/
 
-/*client.execute("XQUERY declare namespace tei='http://www.tei-c.org/ns/1.0'; " +
-    "for $n in (collection('C/Hooker/')//tei:p[position() = 1])\n" +
-    "return db:path($n)",
-    function(err,res) { if(!err) console.log(res.result)} );*/
-
-
-// uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
 app.use(bodyParser.json());

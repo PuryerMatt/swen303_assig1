@@ -10,7 +10,6 @@ client.execute("OPEN ColensoDB");
 
 /* GET home page. */
 router.get("/",function(req,res,next){
-    //console.log("ORIGINAL URL: " + req.originalUrl);
     if(req.originalUrl === "/") {
         client.execute("XQUERY db:list('ColensoDB')", function (error, result) {
             if (error) {
@@ -42,12 +41,10 @@ router.get("/",function(req,res,next){
                 var list = result.result;
                 var listArray = list.split("\r\n");
                 var finalList = grabFront(listArray,slashCount);
-                 // console.log(listArray);
                 var direct = false;
                 if(finalList[0].search("xml") != -1){
                     direct = true
                 }
-                //console.log("DIRECT: " + direct);
                 res.render('index', {pathArray: finalList, direct: direct});
             }
         });

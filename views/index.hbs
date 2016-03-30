@@ -14,11 +14,11 @@
 
             {{#if direct}}
                 {{#each pathArray}}
-                    <a href="browse/?pathResult={{{this}}}" id="index-button" class="btn btn-info"  role="button">{{{this}}}</a>
+                    <a href="browse/?pathResult={{{this}}}" id="index-button" class="btn btn-primary"  role="button">{{{this}}}</a>
                 {{/each}}
             {{else}}
                 {{#each pathArray}}
-                    <a href="/?pathResult={{{this}}}" id="index-button" class="btn btn-info"  role="button">{{{this}}}</a>
+                    <a href="/?pathResult={{{this}}}" id="index-button" class="btn btn-primary"  role="button">{{{this}}}</a>
                 {{/each}}
             {{/if}}
 

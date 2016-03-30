@@ -9,6 +9,7 @@ client.execute("OPEN ColensoDB");
 router.get('/', function(req, res, next) {//request, response
 
     var querySegment = developQuery(req.query.searchInput);
+    console.log("QUERYSEGMENT: " + querySegment);
     console.log(querySegment);
     var xQuery = "XQUERY declare namespace tei ='http://www.tei-c.org/ns/1.0';" +
         "for $file in collection('ColensoDB')" +
@@ -20,7 +21,7 @@ router.get('/', function(req, res, next) {//request, response
         else {
             var list = result.result;
             var listArray = list.split("\r\n");
-            //console.log("LISTARRAY: " + listArray);
+
           res.render('stringSearch', { queryResult:  listArray});
         }
       }
@@ -31,83 +32,33 @@ function developQuery(searchQuery){
     if(searchQuery === undefined){
         return "$file//text() contains text {'kshfbklsdbhfkljhsdfklhsdfkljfh'}";
     }
-    console.log("TESTY: " + searchQuery);
-    var textSearch = "$file//text() contains text {'";
     var splitQuery = searchQuery.split(/[ ,]+/);
     var finalQuery = "$file//text() contains text '";
     var currentWord = "";
 
-    console.log("SPLIT QUERY: " + splitQuery);
     for(var i = 0; i < splitQuery.length; i++){
-        if(splitQuery[i] === "and"){
-            console.log("TEST 1");
+        if(splitQuery[i] === "AND"){
             finalQuery = finalQuery + currentWord + "'" + " ftand '";
             currentWord = ""
-        } else if(splitQuery[i] === "or"){
-            console.log("TEST 2");
+        } else if(splitQuery[i] === "OR"){
             finalQuery = finalQuery + currentWord + "'" + " ftor '";
             currentWord = ""
-        } /*else if(splitQuery[i] === "not") {
-            console.log("TEST 3");
-            finalQuery = finalQuery + currentWord + "'}" + " not " + textSearch;
-            currentWord = ""
-        }*/ else{
-            console.log("TEST 4");
+        } else{
             if(currentWord === ""){//newWord
                 currentWord = splitQuery[i];
             } else {
                 currentWord = currentWord  + splitQuery[i];
             }
-
         }
     }
     if(currentWord !== ""){
         finalQuery = finalQuery + currentWord + "'";
     }
-    console.log("Final Query " + finalQuery);
+
     return finalQuery;
 }
 
-/*function developQuery(searchQuery){
-    if(searchQuery === undefined){
-        return "$file//text() contains text {'kshfbklsdbhfkljhsdfklhsdfkljfh'}";
-    }
-    console.log("TESTY: " + searchQuery);
-    var textSearch = "$file//text() contains text {'";
-    var splitQuery = searchQuery.split(/[ ,]+/);
-    var finalQuery = "$file//text() contains text {'";
-    var currentWord = "";
 
-    console.log("SPLIT QUERY: " + splitQuery);
-    for(var i = 0; i < splitQuery.length; i++){
-        if(splitQuery[i] === "and"){
-            console.log("TEST 1");
-            finalQuery = finalQuery + currentWord + "'}" + " and " + textSearch;
-            currentWord = ""
-        } else if(splitQuery[i] === "or"){
-            console.log("TEST 2");
-            finalQuery = finalQuery + currentWord + "'}" + " or " + textSearch;
-            currentWord = ""
-        } /!*else if(splitQuery[i] === "not") {
-         console.log("TEST 3");
-         finalQuery = finalQuery + currentWord + "'}" + " not " + textSearch;
-         currentWord = ""
-         }*!/ else{
-            console.log("TEST 4");
-            if(currentWord === ""){//newWord
-                currentWord = splitQuery[i];
-            } else {
-                currentWord = currentWord  + splitQuery[i];
-            }
-
-        }
-    }
-    if(currentWord !== ""){
-        finalQuery = finalQuery + currentWord + "'}";
-    }
-    console.log("Final Query " + finalQuery);
-    return finalQuery;
-}*/
 
 
 

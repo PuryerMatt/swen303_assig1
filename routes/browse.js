@@ -25,25 +25,13 @@ router.get("/download/*",function(req,res,next){
 router.get("/",function(req,res,next){
     var path = req.originalUrl.split("browse/?pathResult=");
     path = path[1];
-    console.log("TEST: " + path);
     client.execute("XQUERY declare namespace tei ='http://www.tei-c.org/ns/1.0';"+
         "doc('ColensoDB/"+ path +"')", function(error,result){
         if(error){console.error(error)}
         else {
 
-
-
-
-
-            // $ = cheerio.load(result.result);
-            //var xmlFile = $.parseXML();
-            // var xmlFile = ParseXML(result.result);
             var prettyDoc = pretty.xml(result.result,4);
             prettyDoc = new Handlebars.SafeString(prettyDoc);
-            // console.log(result.result);
-
-            //res.sendFile(xmlDoc.xml);
-            //console.log(xmlFile);
 
             res.render('browse',{xmlDoc: result.result,  prettyDoc: prettyDoc, path:path});
 

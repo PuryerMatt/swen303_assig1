@@ -15,13 +15,12 @@ client.execute("OPEN ColensoDB");
 router.get("/", function(req,res,next) {
    res.render('addXML', {success: "XML formatted text goes here"});
 });
+
 router.post("/add",function(req,res,next){
     var addedXML = req.body.addedXML;
 
     var name = req.body.docName;
     addedXML = "<TEI xmlns='http://www.tei-c.org/ns/1.0' xml:id='"+name+"'>" + addedXML + "</TEI>";
-    //console.log("NAME: " +name);
-    //console.log("ADDED XML"+ addedXML);
     if(name.length === 0){
         res.render('addXML', {success: "Please define a document name"});
     } else if(addedXML. length === 0){
