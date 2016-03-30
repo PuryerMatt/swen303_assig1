@@ -1,12 +1,11 @@
 # Paths
-INPUTPATH = C:/Users/MattP/Downloads/Colenso_TEIs (1).zip
-DATAPATH = C:/Program Files (x86)/BaseX/
-WORKPATH = C:/Program Files (x86)/BaseX/webapp/dba/
+INPUTPATH = C:/UNI 2016/SWEN 303/SWEN303_Assig1/Colenso
+DATAPATH = C:/UNI 2016/SWEN 303/SWEN303_Assig1/basex/
+WORKPATH = C:/UNI 2016/SWEN 303/SWEN303_Assig1/basex/
 PROJECTPATH = 
 EDITOR = 0
-INPUTS = 2
-INPUTS1 = C:/Users/MattP/Downloads/Colenso_TEIs (1).zip
-INPUTS2 = C:/Users/MattP/Downloads/XML Stuff/Colenso_TEIs.zip
+INPUTS = 1
+INPUTS1 = C:/UNI 2016/SWEN 303/SWEN303_Assig1/Colenso
 OPEN = 0
 
 # Layout
@@ -21,12 +20,12 @@ COLORBLUE = 6
 
 # Windows
 UPDATEVERSION = 8.4.1
-VIEWS = V map editor H folder plot - H text info table tree explore - - 
+VIEWS = V H editor folder map plot - H text info table tree explore - - 
 GUISIZE0 = 1004
 GUISIZE1 = 748
 GUILOC0 = 10
 GUILOC1 = 10
-MAXSTATE = true
+MAXSTATE = false
 SHOWBUTTONS = true
 SHOWINPUT = true
 SHOWSTATUS = true
@@ -64,7 +63,7 @@ PARSEPROJ = true
 AUTO = true
 FILES = *.xml, *.xq*
 HIDDENFILES = true
-SEARCHMODE = 1
+SEARCHMODE = 0
 FILTERRT = false
 EXECRT = false
 DBNAME = ColensoDB
@@ -84,40 +83,18 @@ MAXTEXT = 2097152
 MAXHITS = 250000
 
 # Search
-SR_SEARCH = letter
+SR_SEARCH = 
 SR_REPLACE = 
 SR_REGEX = false
 SR_CASE = false
 SR_WORD = false
 SR_MULTI = false
-SEARCHED = 2
-SEARCHED1 = aed
-SEARCHED2 = 
+SEARCHED = 0
 REPLACED = 0
 
 # History
-COMMANDS = 1
-COMMANDS1 = 
-SEARCH = 12
-SEARCH1 = /title
-SEARCH2 = 
-SEARCH3 = pear
-SEARCH4 = string
-SEARCH5 = *
-SEARCH6 = matt
-SEARCH7 = carl
-SEARCH8 = scott
-SEARCH9 = cullum
-SEARCH10 = porn
-SEARCH11 = are
-SEARCH12 = is
-XQUERY = 7
-XQUERY1 = doc('Colenso/diary/diary.xml')
-XQUERY2 = teiHeader/fileDesc/titleStmt/title
-XQUERY3 = title
-XQUERY4 = /title
-XQUERY5 = *
-XQUERY6 = doc("diary.xml")
-XQUERY7 = city
+COMMANDS = 0
+SEARCH = 0
+XQUERY = 0
 
 # Local Options

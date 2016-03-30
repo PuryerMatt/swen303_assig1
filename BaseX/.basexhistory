@@ -1,8 +1,0 @@
-help
-basex/bin/basexserver d -c"CREATE DATABASE Colenso ./Colenso"
-bin
-c
-QUIT
-help
-QUIT
-exit

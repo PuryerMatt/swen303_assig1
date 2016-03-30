@@ -1,7 +1,7 @@
 # General Options
 DEBUG = false
-DBPATH = C:\UNI 2016/SWEN 303/SWEN303_Assig1/BaseX/data
-REPOPATH = C:\UNI 2016/SWEN 303/SWEN303_Assig1/BaseX/repo
+DBPATH = C:/UNI 2016/SWEN 303/SWEN303_Assig1/basex/data
+REPOPATH = C:/UNI 2016/SWEN 303/SWEN303_Assig1/basex/repo
 LANG = English
 LANGKEYS = false
 GLOBALLOCK = false
@@ -25,7 +25,7 @@ LOGMSGMAXLEN = 1000
 ASYNCTIMEOUT = 3600
 
 # HTTP Services
-WEBPATH = C:/Program Files (x86)/BaseX/webapp
+WEBPATH = C:/UNI 2016/SWEN 303/SWEN303_Assig1/basex/webapp
 RESTPATH = 
 RESTXQPATH = 
 CACHERESTXQ = false
